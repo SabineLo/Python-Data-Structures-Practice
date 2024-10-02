@@ -55,4 +55,70 @@ def correction(expenses):
             expenses[i]= expenses[i] - 200
             return expenses
         
-exersice_one()
+#exersice_one()
+
+def exersise_two():
+    heros=['spider man','thor','hulk','iron man','captain america']
+
+    print(length(heros))
+
+    print(add_in_end(heros))
+
+    print(fix_error(heros))
+
+    print(replace_item(heros))
+
+    print(alphabetical(heros))
+    
+
+
+def length(heros):
+    #I think there is multiple ways to find length either just count them using for loop
+    #or just do .len
+    length = len(heros)
+    return length
+
+def add_in_end(heros):
+    #If i were to want it not to affect og list then I would just do this
+    #new_list = heros.copy()
+    #new_list.append('black panther')
+    heros.append('black panther')
+    return heros
+
+def fix_error(heros):
+    #if i want to make more generic probably just give a parameter
+    heros.remove('black panther')
+    heros.insert(3,'black panther')
+    return heros
+
+#remember splicing!! i mean slicing
+def replace_item(heros):
+    heros[1:3] = ['doctor strange']
+    return heros
+
+#nice little hack return dir(heros) for a list of options
+#sorted used for list 
+#.sort() for numbers me assumes
+def alphabetical(heros):
+    heros = sorted(heros)
+    return heros
+
+#exersise_two()
+
+
+#Excersise three
+#Idk if it is asking me to also have max number odd
+#is this efficient ? I think this is O(n)
+def exersise_three():
+
+    odd_array = []
+    ans = int(input("Enter an odd max number: "))
+    #if(ans % 2 == 1): Fix mistake this line is not needed because it is already checking
+    #in next lines if it is even or not
+    for num in range(1,ans):
+        if(num % 2 == 1):
+            odd_array.append(num)
+    print(odd_array)
+    
+
+exersise_three()
